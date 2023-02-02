@@ -1,0 +1,136 @@
+
+p:     file format elf64-littleriscv
+
+
+Disassembly of section .text:
+
+00000000000100e8 <main>:
+   100e8:	7105                	addi	sp,sp,-480
+   100ea:	efa2                	sd	s0,472(sp)
+   100ec:	1380                	addi	s0,sp,480
+   100ee:	87aa                	mv	a5,a0
+   100f0:	e2b43023          	sd	a1,-480(s0)
+   100f4:	e2f42623          	sw	a5,-468(s0)
+   100f8:	fe042623          	sw	zero,-20(s0)
+   100fc:	a8f1                	j	101d8 <main+0xf0>
+   100fe:	fe042423          	sw	zero,-24(s0)
+   10102:	a87d                	j	101c0 <main+0xd8>
+   10104:	fe842683          	lw	a3,-24(s0)
+   10108:	fec42703          	lw	a4,-20(s0)
+   1010c:	87ba                	mv	a5,a4
+   1010e:	0786                	slli	a5,a5,0x1
+   10110:	97ba                	add	a5,a5,a4
+   10112:	0786                	slli	a5,a5,0x1
+   10114:	97b6                	add	a5,a5,a3
+   10116:	078a                	slli	a5,a5,0x2
+   10118:	17c1                	addi	a5,a5,-16
+   1011a:	97a2                	add	a5,a5,s0
+   1011c:	e407a023          	sw	zero,-448(a5)
+   10120:	fe042223          	sw	zero,-28(s0)
+   10124:	a051                	j	101a8 <main+0xc0>
+   10126:	fe842683          	lw	a3,-24(s0)
+   1012a:	fec42703          	lw	a4,-20(s0)
+   1012e:	87ba                	mv	a5,a4
+   10130:	0786                	slli	a5,a5,0x1
+   10132:	97ba                	add	a5,a5,a4
+   10134:	0786                	slli	a5,a5,0x1
+   10136:	97b6                	add	a5,a5,a3
+   10138:	078a                	slli	a5,a5,0x2
+   1013a:	17c1                	addi	a5,a5,-16
+   1013c:	97a2                	add	a5,a5,s0
+   1013e:	e407a707          	flw	fa4,-448(a5)
+   10142:	fe442683          	lw	a3,-28(s0)
+   10146:	fec42703          	lw	a4,-20(s0)
+   1014a:	87ba                	mv	a5,a4
+   1014c:	0786                	slli	a5,a5,0x1
+   1014e:	97ba                	add	a5,a5,a4
+   10150:	0786                	slli	a5,a5,0x1
+   10152:	97b6                	add	a5,a5,a3
+   10154:	078a                	slli	a5,a5,0x2
+   10156:	17c1                	addi	a5,a5,-16
+   10158:	97a2                	add	a5,a5,s0
+   1015a:	f607a687          	flw	fa3,-160(a5)
+   1015e:	fe842683          	lw	a3,-24(s0)
+   10162:	fe442703          	lw	a4,-28(s0)
+   10166:	87ba                	mv	a5,a4
+   10168:	0786                	slli	a5,a5,0x1
+   1016a:	97ba                	add	a5,a5,a4
+   1016c:	0786                	slli	a5,a5,0x1
+   1016e:	97b6                	add	a5,a5,a3
+   10170:	078a                	slli	a5,a5,0x2
+   10172:	17c1                	addi	a5,a5,-16
+   10174:	97a2                	add	a5,a5,s0
+   10176:	ed07a787          	flw	fa5,-304(a5)
+   1017a:	10f6f7d3          	fmul.s	fa5,fa3,fa5
+   1017e:	00f777d3          	fadd.s	fa5,fa4,fa5
+   10182:	fe842683          	lw	a3,-24(s0)
+   10186:	fec42703          	lw	a4,-20(s0)
+   1018a:	87ba                	mv	a5,a4
+   1018c:	0786                	slli	a5,a5,0x1
+   1018e:	97ba                	add	a5,a5,a4
+   10190:	0786                	slli	a5,a5,0x1
+   10192:	97b6                	add	a5,a5,a3
+   10194:	078a                	slli	a5,a5,0x2
+   10196:	17c1                	addi	a5,a5,-16
+   10198:	97a2                	add	a5,a5,s0
+   1019a:	e4f7a027          	fsw	fa5,-448(a5)
+   1019e:	fe442783          	lw	a5,-28(s0)
+   101a2:	2785                	addiw	a5,a5,1
+   101a4:	fef42223          	sw	a5,-28(s0)
+   101a8:	fe442783          	lw	a5,-28(s0)
+   101ac:	0007871b          	sext.w	a4,a5
+   101b0:	4795                	li	a5,5
+   101b2:	f6e7dae3          	bge	a5,a4,10126 <main+0x3e>
+   101b6:	fe842783          	lw	a5,-24(s0)
+   101ba:	2785                	addiw	a5,a5,1
+   101bc:	fef42423          	sw	a5,-24(s0)
+   101c0:	fe842783          	lw	a5,-24(s0)
+   101c4:	0007871b          	sext.w	a4,a5
+   101c8:	4795                	li	a5,5
+   101ca:	f2e7dde3          	bge	a5,a4,10104 <main+0x1c>
+   101ce:	fec42783          	lw	a5,-20(s0)
+   101d2:	2785                	addiw	a5,a5,1
+   101d4:	fef42623          	sw	a5,-20(s0)
+   101d8:	fec42783          	lw	a5,-20(s0)
+   101dc:	0007871b          	sext.w	a4,a5
+   101e0:	4795                	li	a5,5
+   101e2:	f0e7dee3          	bge	a5,a4,100fe <main+0x16>
+   101e6:	4781                	li	a5,0
+   101e8:	853e                	mv	a0,a5
+   101ea:	647e                	ld	s0,472(sp)
+   101ec:	613d                	addi	sp,sp,480
+   101ee:	8082                	ret
+
+Disassembly of section .comment:
+
+0000000000000000 <.comment>:
+   0:	3a434347          	fmsub.d	ft6,ft6,ft4,ft7,rmm
+   4:	2820                	fld	fs0,80(s0)
+   6:	31202967          	.4byte	0x31202967
+   a:	2e31                	addiw	t3,t3,12
+   c:	2e31                	addiw	t3,t3,12
+   e:	0030                	addi	a2,sp,8
+
+Disassembly of section .riscv.attributes:
+
+0000000000000000 <.riscv.attributes>:
+   0:	3241                	addiw	tp,tp,-16 # fffffffffffffff0 <__global_pointer$+0xfffffffffffee600>
+   2:	0000                	unimp
+   4:	7200                	ld	s0,32(a2)
+   6:	7369                	lui	t1,0xffffa
+   8:	01007663          	bgeu	zero,a6,14 <main-0x100d4>
+   c:	0028                	addi	a0,sp,8
+   e:	0000                	unimp
+  10:	7205                	lui	tp,0xfffe1
+  12:	3676                	fld	fa2,376(sp)
+  14:	6934                	ld	a3,80(a0)
+  16:	7032                	.2byte	0x7032
+  18:	5f30                	lw	a2,120(a4)
+  1a:	326d                	addiw	tp,tp,-5 # fffffffffffe0ffb <__global_pointer$+0xfffffffffffcf60b>
+  1c:	3070                	fld	fa2,224(s0)
+  1e:	615f 7032 5f30      	.byte	0x5f, 0x61, 0x32, 0x70, 0x30, 0x5f
+  24:	3266                	fld	ft4,120(sp)
+  26:	3070                	fld	fa2,224(s0)
+  28:	645f 7032 5f30      	.byte	0x5f, 0x64, 0x32, 0x70, 0x30, 0x5f
+  2e:	30703263          	.4byte	0x30703263
+	...

@@ -1,0 +1,9 @@
+compiling input ELF files
+riscv64-unknown-linux-gnu-gcc -c -fpic -fpie  covert.c
+riscv64-unknown-linux-gnu-ld -o p2 covert.o
+riscv64-unknown-linux-gnu-objdump -Dr p2 > log5.txt
+
+
+
+compiling mixer
+g++ -std=c++11 mixer.cpp -o mixer.o

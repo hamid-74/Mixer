@@ -1,0 +1,92 @@
+ELF Header:
+  Magic:   7f 45 4c 46 02 01 01 00 00 00 00 00 00 00 00 00 
+  Class:                             ELF64
+  Data:                              2's complement, little endian
+  Version:                           1 (current)
+  OS/ABI:                            UNIX - System V
+  ABI Version:                       0
+  Type:                              EXEC (Executable file)
+  Machine:                           RISC-V
+  Version:                           0x1
+  Entry point address:               0x0
+  Start of program headers:          576 (bytes into file)
+  Start of section headers:          64 (bytes into file)
+  Flags:                             0x5, RVC, double-float ABI
+  Size of this header:               64 (bytes)
+  Size of program headers:           56 (bytes)
+  Number of program headers:         4
+  Size of section headers:           64 (bytes)
+  Number of section headers:         8
+  Section header string table index: 7
+
+Section Headers:
+  [Nr] Name              Type             Address           Offset
+       Size              EntSize          Flags  Link  Info  Align
+  [ 0]                   NULL             0000000000000000  00000000
+       0000000000000000  0000000000000000           0     0     0
+  [ 1] .text             PROGBITS         0000000000000000  00000320
+       000000000000048e  0000000000000000  AX       0     0     2
+  [ 2] .bss              NOBITS           0000000000000490  00000490
+       0000000000300000  0000000000000000  WA       0     0     8
+  [ 3] .comment          PROGBITS         0000000000000000  000007ae
+       0000000000000010  0000000000000001  MS       0     0     1
+  [ 4] .riscv.attributes RISCV_ATTRIBUTE  0000000000000000  000007be
+       0000000000000033  0000000000000000           0     0     1
+  [ 5] .symtab           SYMTAB           0000000000000000  000007f8
+       0000000000000120  0000000000000018           6     7     8
+  [ 6] .strtab           STRTAB           0000000000000000  00000918
+       0000000000000027  0000000000000000           0     0     1
+  [ 7] .shstrtab         STRTAB           0000000000000000  0000093f
+       0000000000000041  0000000000000000           0     0     1
+Key to Flags:
+  W (write), A (alloc), X (execute), M (merge), S (strings), I (info),
+  L (link order), O (extra OS processing required), G (group), T (TLS),
+  C (compressed), x (unknown), o (OS specific), E (exclude),
+  D (mbind), p (processor specific)
+
+There are no section groups in this file.
+
+Program Headers:
+  Type           Offset             VirtAddr           PhysAddr
+                 FileSiz            MemSiz              Flags  Align
+  RISCV_ATTRIBUT 0x00000000000007be 0x0000000000000000 0x0000000000000000
+                 0x0000000000000033 0x0000000000000033  R      0x1
+  LOAD           0x0000000000000320 0x0000000000000000 0x0000000000000000
+                 0x000000000000048e 0x000000000000048e  R E    0x2
+  LOAD           0x0000000000000490 0x0000000000000490 0x0000000000000490
+                 0x0000000000000000 0x0000000000300000  RW     0x8
+  GNU_STACK      0x0000000000000000 0x0000000000000000 0x0000000000000000
+                 0x0000000000000000 0x0000000000000000  RW     0x10
+
+ Section to Segment mapping:
+  Segment Sections...
+   00     .riscv.attributes 
+   01     .text 
+   02     .bss 
+   03     
+
+There is no dynamic section in this file.
+
+There are no relocations in this file.
+
+The decoding of unwind sections for machine type RISC-V is not currently supported.
+
+Symbol table '.symtab' contains 12 entries:
+   Num:    Value          Size Type    Bind   Vis      Ndx Name
+     0: 0000000000000000     0 NOTYPE  LOCAL  DEFAULT  UND 
+     1: 0000000000000000  1166 SECTION LOCAL  DEFAULT    1 .text
+     2: 0000000000000490 0x300000 SECTION LOCAL  DEFAULT    2 .bss
+     3: 0000000000000000    16 SECTION LOCAL  DEFAULT    3 .comment
+     4: 0000000000000000    51 SECTION LOCAL  DEFAULT    4 .riscv.attributes
+     5: 0000000000000000  1166 <OS specific>: 12 LOCAL  DEFAULT    1 main
+     6: 0000000000000000   388 NOTYPE  LOCAL  DEFAULT    1 text1
+     7: 0000000000000184   388 NOTYPE  LOCAL  DEFAULT    1 text2
+     8: 0000000000000308   388 NOTYPE  LOCAL  DEFAULT    1 text3
+     9: 0000000000000490 0x100000 <OS specific>: 10 LOCAL  DEFAULT    2 bss1
+    10: 0000000000100490 0x100000 <OS specific>: 10 LOCAL  DEFAULT    2 bss2
+    11: 0000000000200490 0x100000 <OS specific>: 10 LOCAL  DEFAULT    2 bss3
+
+No version information found in this file.
+Attribute Section: riscv
+File Attributes
+  Tag_RISCV_arch: "rv64i2p0_m2p0_a2p0_f2p0_d2p0_c2p0"
